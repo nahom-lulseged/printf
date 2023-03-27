@@ -1,7 +1,6 @@
 #ifndef MAIN_H
 #define MAIN_H
 #include <stdarg.h>
-<<<<<<< HEAD
 #include <stdio.h>
 #include <unistd.h>
 
@@ -39,23 +38,8 @@ struct fmt
  * @fm_t: The function associated.
  */
 typedef struct fmt fmt_t;
-=======
 
-/**
-* struct specifiers - Struct specifiers
-* @specifier: The conversion specifier
-* @f: The function pointer
-*/
-typedef struct specifiers
-{
-char *specifier;
-int (*f)(va_list args);
-} spc_dt;
->>>>>>> f05984dc519284f8344ab837db72777eacb23155
-
-int _write(char c);
 int _printf(const char *format, ...);
-<<<<<<< HEAD
 int handle_print(const char *fmt, int *i,
 va_list list, char buffer[], int flags, int width, int precision, int size);
 
@@ -132,17 +116,3 @@ long int convert_size_unsgnd(unsigned long int num, int size);
 
 #endif /* MAIN_H */
 
-=======
-int _print_a_char(va_list args);
-int _print_a_string(va_list args);
-int _print_format(const char *format, va_list args);
-int _print_spec(char format, va_list args);
-int _print_invalid_spec(char prev_format, char format, int count);
-int _print_a_integer(va_list args);
-void _recursion_integer(int a);
-int _print_int_binary(va_list args);
-void _recursion_int_binary(int a);
-int _validate_char(char _type);
-
-#endif /* _MAIN */
->>>>>>> f05984dc519284f8344ab837db72777eacb23155
